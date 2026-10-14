@@ -1,0 +1,19 @@
+NEXT-DAY STOCK-OUT CLASSIFIER — SYNTHETIC DATA ONLY
+===================================================
+Target: whether simulated Stockout_Flag is 1 on Target_Date.
+Features are from Prediction_Date or known scenario fields; target-day actual stock/demand columns are not input features.
+Train: 1240 rows, 43 positives (3.47%).
+Validation: 260 rows, 19 positives (7.31%).
+Test: 280 rows, 14 positives (5.00%).
+Selected model (validation AP): LogisticRegression_balanced.
+Threshold selected on validation by F1: 0.65 (validation best F1=0.7727).
+
+Final held-out test metrics:
+Split                        Model  Rows  Positive_Labels  Positive_Rate  Threshold  Accuracy  Balanced_Accuracy  Precision  Recall    F1  Average_Precision_PR_AUC  ROC_AUC  True_Negatives  False_Positives  False_Negatives  True_Positives
+ test  LogisticRegression_balanced   280               14           0.05       0.65  0.985714           0.992481   0.777778     1.0 0.875                   0.90134 0.995166             262                4                0              14
+ test Baseline_Predict_No_Stockout   280               14           0.05       0.50  0.950000           0.500000   0.000000     0.0 0.000                   0.05000 0.500000             266                0               14               0
+
+Warning: Only 14 positives exist in the test set; precision/recall/F1 are unstable with this small support.
+Accuracy alone is misleading for this imbalanced label (most days have no stock-out).
+All labels derive from a synthetic inventory simulator. These metrics do not establish real-world stock-out prediction quality.
+Baseline predicts no stock-out and is included to expose class-imbalance tradeoffs.

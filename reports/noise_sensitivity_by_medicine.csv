@@ -1,0 +1,41 @@
+Scenario,Noise_Std_Dev_Assumption,Medicine_ID,Medicine_Name,Unit_Of_Measure,Rows,Mean_Expected_Demand,Mean_Absolute_Impact_Units_vs_No_Noise,Mean_Absolute_Impact_Percent_vs_No_Noise,Rows_with_Impact_at_least_20pct,Mean_Absolute_Difference_vs_Current_Demand,Percent_Rows_with_Impact_at_least_20pct
+No random noise,0.0000,MED001,Paracetamol Tablet 500 mg,tablets,180,27.5053,0.0000,0.0000,0,4.0167,0.0000
+No random noise,0.0000,MED002,Amoxicillin Capsule 500 mg,capsules,180,5.5618,0.0000,0.0000,0,0.8833,0.0000
+No random noise,0.0000,MED003,Oral rehydration salts (ORS),sachets,180,7.7249,0.0000,0.0000,0,1.1444,0.0000
+No random noise,0.0000,MED004,Zinc sulphate Dispersible Tablet 20 mg,tablets,180,8.9252,0.0000,0.0000,0,1.3722,0.0000
+No random noise,0.0000,MED005,Amlodipine Tablet 5 mg,tablets,180,11.7935,0.0000,0.0000,0,1.6111,0.0000
+No random noise,0.0000,MED006,Metformin Tablet 500 mg,tablets,180,13.8068,0.0000,0.0000,0,2.0778,0.0000
+No random noise,0.0000,MED007,Albendazole Tablet 400 mg,tablets,180,3.0309,0.0000,0.0000,0,0.4722,0.0000
+No random noise,0.0000,MED008,Ferrous salt 60 mg + Folic acid 500 mcg Tablet,tablets,180,13.6929,0.0000,0.0000,0,2.0056,0.0000
+No random noise,0.0000,MED009,Omeprazole Capsule 20 mg,capsules,180,9.7651,0.0000,0.0000,0,1.4500,0.0000
+No random noise,0.0000,MED010,Salbutamol Tablet 2 mg,tablets,180,4.7452,0.0000,0.0000,0,0.7444,0.0000
+Lower noise,0.1000,MED001,Paracetamol Tablet 500 mg,tablets,180,27.2438,2.1011,7.7238,9,1.9222,5.0000
+Lower noise,0.1000,MED002,Amoxicillin Capsule 500 mg,capsules,180,5.5212,0.4569,8.0748,11,0.4556,6.1111
+Lower noise,0.1000,MED003,Oral rehydration salts (ORS),sachets,180,7.7675,0.5788,7.4759,8,0.5722,4.4444
+Lower noise,0.1000,MED004,Zinc sulphate Dispersible Tablet 20 mg,tablets,180,8.9214,0.7007,7.7327,6,0.6667,3.3333
+Lower noise,0.1000,MED005,Amlodipine Tablet 5 mg,tablets,180,11.7946,0.8465,7.2445,8,0.7889,4.4444
+Lower noise,0.1000,MED006,Metformin Tablet 500 mg,tablets,180,13.9848,1.1011,7.8483,8,1.0389,4.4444
+Lower noise,0.1000,MED007,Albendazole Tablet 400 mg,tablets,180,3.0397,0.2411,7.9130,5,0.2111,2.7778
+Lower noise,0.1000,MED008,Ferrous salt 60 mg + Folic acid 500 mcg Tablet,tablets,180,13.6778,1.0321,7.5406,4,0.9556,2.2222
+Lower noise,0.1000,MED009,Omeprazole Capsule 20 mg,capsules,180,9.8566,0.7749,7.8642,7,0.6889,3.8889
+Lower noise,0.1000,MED010,Salbutamol Tablet 2 mg,tablets,180,4.7673,0.3804,8.0962,8,0.3667,4.4444
+Current noise,0.1900,MED001,Paracetamol Tablet 500 mg,tablets,180,27.0085,3.9920,14.6753,54,0.0000,30.0000
+Current noise,0.1900,MED002,Amoxicillin Capsule 500 mg,capsules,180,5.4881,0.8647,15.2660,53,0.0000,29.4444
+Current noise,0.1900,MED003,Oral rehydration salts (ORS),sachets,180,7.8059,1.0996,14.2042,43,0.0000,23.8889
+Current noise,0.1900,MED004,Zinc sulphate Dispersible Tablet 20 mg,tablets,180,8.9217,1.3276,14.6576,48,0.0000,26.6667
+Current noise,0.1900,MED005,Amlodipine Tablet 5 mg,tablets,180,11.7957,1.6084,13.7645,42,0.0000,23.3333
+Current noise,0.1900,MED006,Metformin Tablet 500 mg,tablets,180,14.1451,2.0921,14.9119,53,0.0000,29.4444
+Current noise,0.1900,MED007,Albendazole Tablet 400 mg,tablets,180,3.0477,0.4580,15.0347,50,0.0000,27.7778
+Current noise,0.1900,MED008,Ferrous salt 60 mg + Folic acid 500 mcg Tablet,tablets,180,13.6642,1.9611,14.3271,43,0.0000,23.8889
+Current noise,0.1900,MED009,Omeprazole Capsule 20 mg,capsules,180,9.9389,1.4722,14.9420,53,0.0000,29.4444
+Current noise,0.1900,MED010,Salbutamol Tablet 2 mg,tablets,180,4.7872,0.7228,15.3828,53,0.0000,29.4444
+Higher-noise stress scenario,0.2500,MED001,Paracetamol Tablet 500 mg,tablets,180,26.8559,5.2483,19.2890,67,1.2333,37.2222
+Higher-noise stress scenario,0.2500,MED002,Amoxicillin Capsule 500 mg,capsules,180,5.4831,1.1194,19.7902,74,0.2444,41.1111
+Higher-noise stress scenario,0.2500,MED003,Oral rehydration salts (ORS),sachets,180,7.8374,1.4409,18.6291,72,0.3389,40.0000
+Higher-noise stress scenario,0.2500,MED004,Zinc sulphate Dispersible Tablet 20 mg,tablets,180,8.9386,1.7289,19.1094,67,0.3556,37.2222
+Higher-noise stress scenario,0.2500,MED005,Amlodipine Tablet 5 mg,tablets,180,11.8080,2.1047,18.0181,66,0.5000,36.6667
+Higher-noise stress scenario,0.2500,MED006,Metformin Tablet 500 mg,tablets,180,14.2521,2.7526,19.6194,74,0.6333,41.1111
+Higher-noise stress scenario,0.2500,MED007,Albendazole Tablet 400 mg,tablets,180,3.0573,0.5983,19.6734,76,0.1444,42.2222
+Higher-noise stress scenario,0.2500,MED008,Ferrous salt 60 mg + Folic acid 500 mcg Tablet,tablets,180,13.6595,2.5759,18.8147,72,0.5722,40.0000
+Higher-noise stress scenario,0.2500,MED009,Omeprazole Capsule 20 mg,capsules,180,9.9960,1.9349,19.6409,75,0.5222,41.6667
+Higher-noise stress scenario,0.2500,MED010,Salbutamol Tablet 2 mg,tablets,180,4.8005,0.9510,20.2405,79,0.2333,43.8889

@@ -1,0 +1,5 @@
+Scenario,Noise_Std_Dev_Assumption,Rows,Mean_Noise_Factor,Mean_Expected_Demand,Mean_Absolute_Impact_Units_vs_No_Noise,Mean_Absolute_Impact_Percent_vs_No_Noise,Rows_with_Impact_at_least_20pct,Percent_Rows_with_Impact_at_least_20pct,Mean_Absolute_Difference_vs_Current_Generated_Demand,Exact_Reproduction_of_Current_Demand,Note
+No random noise,0.0000,1800,1.0000,10.6552,0.0000,0.0000,0,0.0000,1.5778,not applicable,Synthetic demand-only sensitivity; not calibrated to real PHC demand.
+Lower noise,0.1000,1800,1.0015,10.6575,0.8214,7.7514,74,4.1111,0.7667,not applicable,Synthetic demand-only sensitivity; not calibrated to real PHC demand.
+Current noise,0.1900,1800,1.0029,10.6603,1.5598,14.7166,492,27.3333,0.0000,True,Synthetic demand-only sensitivity; not calibrated to real PHC demand.
+Higher-noise stress scenario,0.2500,1800,1.0046,10.6689,2.0455,19.2825,722,40.1111,0.4778,not applicable,Synthetic demand-only sensitivity; not calibrated to real PHC demand.

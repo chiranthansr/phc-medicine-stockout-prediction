@@ -1,0 +1,17 @@
+{
+  "demand_model_loads": true,
+  "stockout_classifier_loads": true,
+  "stockout_classifier_next_day_score_smoke_test": true,
+  "stockout_demo_prediction_date": "2025-03-31",
+  "stockout_demo_target_date": "2025-04-01",
+  "stockout_uncalibrated_score": 3e-05,
+  "validation_row_prediction_smoke_test": true,
+  "smoke_test_rows": 12,
+  "nonnegative_finite_predictions": true,
+  "recursive_7_day_forecast": true,
+  "inventory_projection": true,
+  "forecast_start_date": "2025-04-01",
+  "forecast_rows": 7,
+  "inventory_rows": 7,
+  "note": "Smoke tests confirm package mechanics only; all data and evaluation results are synthetic, and stock-out scores are not calibrated for real PHCs."
+}

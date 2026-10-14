@@ -1,0 +1,11 @@
+Medicine_ID,Medicine_Name,Unit_Of_Measure,Configured_Base_Daily_Demand_Assumption,Configured_Crisis_Multiplier_Assumption,Medicine_List_Source,Source_Data_Type
+MED001,Paracetamol Tablet 500 mg,tablets,30,1.70,NHM Essential Medicine List for SHC & PHC Level updated March 2020,SYNTHETIC_CONFIG
+MED002,Amoxicillin Capsule 500 mg,capsules,6,1.45,NHM Essential Medicine List for SHC & PHC Level updated March 2020,SYNTHETIC_CONFIG
+MED003,Oral rehydration salts (ORS),sachets,8,1.35,NHM Essential Medicine List for SHC & PHC Level updated March 2020,SYNTHETIC_CONFIG
+MED004,Zinc sulphate Dispersible Tablet 20 mg,tablets,9,1.30,NHM Essential Medicine List for SHC & PHC Level updated March 2020,SYNTHETIC_CONFIG
+MED005,Amlodipine Tablet 5 mg,tablets,11,1.10,NHM Essential Medicine List for SHC & PHC Level updated March 2020,SYNTHETIC_CONFIG
+MED006,Metformin Tablet 500 mg,tablets,17,1.12,NHM Essential Medicine List for SHC & PHC Level updated March 2020,SYNTHETIC_CONFIG
+MED007,Albendazole Tablet 400 mg,tablets,3,1.18,NHM Essential Medicine List for SHC & PHC Level updated March 2020,SYNTHETIC_CONFIG
+MED008,Ferrous salt 60 mg + Folic acid 500 mcg Tablet,tablets,15,1.12,NHM Essential Medicine List for SHC & PHC Level updated March 2020,SYNTHETIC_CONFIG
+MED009,Omeprazole Capsule 20 mg,capsules,9,1.10,NHM Essential Medicine List for SHC & PHC Level updated March 2020,SYNTHETIC_CONFIG
+MED010,Salbutamol Tablet 2 mg,tablets,5,1.65,NHM Essential Medicine List for SHC & PHC Level updated March 2020,SYNTHETIC_CONFIG

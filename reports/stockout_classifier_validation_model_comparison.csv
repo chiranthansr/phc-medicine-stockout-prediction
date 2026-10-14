@@ -1,0 +1,4 @@
+Split,Model,Rows,Positive_Labels,Positive_Rate,Threshold,Accuracy,Balanced_Accuracy,Precision,Recall,F1,Average_Precision_PR_AUC,ROC_AUC,True_Negatives,False_Positives,False_Negatives,True_Positives
+validation_threshold_default,LogisticRegression_balanced,260,19,0.073077,0.500000,0.950000,0.948788,0.600000,0.947368,0.734694,0.828558,0.986242,229,12,1,18
+validation_threshold_default,ExtraTreesClassifier_400_leaf3_balanced,260,19,0.073077,0.500000,0.976923,0.963311,0.782609,0.947368,0.857143,0.788421,0.988644,236,5,1,18
+validation_threshold_default,RandomForestClassifier_400_leaf3_balanced,260,19,0.073077,0.500000,0.976923,0.963311,0.782609,0.947368,0.857143,0.724495,0.987333,236,5,1,18

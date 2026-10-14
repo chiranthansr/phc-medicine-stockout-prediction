@@ -1,0 +1,14 @@
+{
+  "phc_id": "PHC-DEMO-001",
+  "medicine_id": "MED001",
+  "medicine_name": "Paracetamol Tablet 500 mg",
+  "unit_of_measure": "tablets",
+  "prediction_date": "2025-03-31",
+  "target_date": "2025-04-01",
+  "current_usable_stock_at_last_record": 293,
+  "declared_crisis_scenario": false,
+  "uncalibrated_stockout_score": 3e-05,
+  "validation_selected_threshold": 0.65,
+  "flag_at_threshold": false,
+  "data_note": "All history and labels are synthetic. This score is not calibrated or validated for real PHCs."
+}

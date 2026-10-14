@@ -1,0 +1,32 @@
+PHC MEDICINE DEMAND MODEL — FINAL EVALUATION
+All demand and facility records in this package are synthetic. Scores do not establish real-world PHC forecasting accuracy.
+
+Selected model: ExtraTrees_400_leaf5
+Selection metric: macro mean per-medicine normalized MAE (lower is better); evaluated only on chronological validation data.
+Final fitting rows (train + validation): 1500
+Final test rows: 280; target dates 2025-03-18 through 2025-03-31
+
+Validation model comparison (model selection):
+                  Model  Rows  MAE_Pooled_Different_Units_Caution  RMSE_Pooled_Different_Units_Caution  R2_Pooled_Different_Units_Caution  Macro_Mean_Per_Medicine_Normalized_MAE                                                                                                 Interpretation_Note
+   ExtraTrees_400_leaf5   260                            2.238954                             3.166274                           0.827154                                0.193191 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+   ExtraTrees_600_leaf8   260                            2.251973                             3.181429                           0.825496                                0.193764 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+   ExtraTrees_400_leaf3   260                            2.291596                             3.247232                           0.818202                                0.196058 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+ RandomForest_500_leaf5   260                            2.326860                             3.331142                           0.808685                                0.200484 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+ RandomForest_400_leaf3   260                            2.340620                             3.361000                           0.805240                                0.201311 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+ GradientBoosting_Huber   260                            2.379081                             3.366810                           0.804566                                0.202082 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+ Baseline_7_Day_Average   260                            2.920881                             4.049475                           0.717278                                0.256014 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+Baseline_30_Day_Average   260                            2.965881                             4.112112                           0.708464                                0.258083 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+  Baseline_Previous_Day   260                            3.634615                             5.307107                           0.514401                                0.319185 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+
+Final held-out test comparison (test used once after model selection):
+                  Model  Rows  MAE_Pooled_Different_Units_Caution  RMSE_Pooled_Different_Units_Caution  R2_Pooled_Different_Units_Caution  Macro_Mean_Per_Medicine_Normalized_MAE                                                                                                 Interpretation_Note
+   ExtraTrees_400_leaf5   280                            2.500813                             3.603617                           0.654692                                0.264885 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+  Baseline_Previous_Day   280                            3.035714                             4.222389                           0.525926                                0.338468 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+ Baseline_7_Day_Average   280                            2.405614                             3.397337                           0.693093                                0.262942 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+Baseline_30_Day_Average   280                            2.512032                             3.527875                           0.669055                                0.276694 Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE.
+
+Per-medicine test metrics are in test_metrics_by_medicine.csv.
+Pooled MAE/RMSE/R2 mix units (tablets/capsules/sachets) and must be interpreted cautiously. Macro normalized MAE computes MAE/actual-mean per medicine and averages these percentages, giving each medicine equal weight.
+The target-day crisis flag is a scenario input. Crisis generalization cannot be validated from the final test split because its target dates contain no crisis period. A sensitivity check found demand-forecaster response to the crisis flag is not consistently upward for all medicines.
+
+A separate next-day stock-out classifier and precision/recall/F1 evaluation are included in stockout_classifier_test_metrics.csv and stockout_classifier_evaluation.txt. These results are also synthetic-only and the test contains 14 positive labels.

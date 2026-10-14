@@ -1,0 +1,11 @@
+Medicine_ID,Medicine_Name,Mean_Demand_During_Crisis,Mean_Demand_Outside_Crisis,Crisis_to_NonCrisis_Demand_Ratio
+MED001,Paracetamol Tablet 500 mg,35.462,26.338,1.346
+MED002,Amoxicillin Capsule 500 mg,7.692,6.182,1.244
+MED003,Oral rehydration salts (ORS),8.231,7.455,1.104
+MED004,Zinc sulphate Dispersible Tablet 20 mg,10.846,8.455,1.283
+MED005,Amlodipine Tablet 5 mg,12.692,12.182,1.042
+MED006,Metformin Tablet 500 mg,13.846,14.442,0.959
+MED007,Albendazole Tablet 400 mg,2.692,2.636,1.021
+MED008,Ferrous salt 60 mg + Folic acid 500 mcg Tablet,10.846,11.662,0.93
+MED009,Omeprazole Capsule 20 mg,10.308,10.195,1.011
+MED010,Salbutamol Tablet 2 mg,7.538,4.532,1.663

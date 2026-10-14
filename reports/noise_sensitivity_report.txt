@@ -1,0 +1,15 @@
+SYNTHETIC DEMAND NOISE SENSITIVITY ANALYSIS
+===========================================
+
+Paired counterfactual comparison using saved standardized Gaussian Z scores.
+The same Z scores are used across scenarios; the current sigma=0.19 scenario should reproduce generated demand.
+The 0.45 lower noise floor is retained in each scenario. This is demand-only and does not recalculate inventory or stock-outs.
+These are illustrative assumptions, not empirical calibration to real PHC demand.
+
+                    Scenario  Noise_Std_Dev_Assumption  Rows  Mean_Noise_Factor  Mean_Expected_Demand  Mean_Absolute_Impact_Units_vs_No_Noise  Mean_Absolute_Impact_Percent_vs_No_Noise  Rows_with_Impact_at_least_20pct  Percent_Rows_with_Impact_at_least_20pct  Mean_Absolute_Difference_vs_Current_Generated_Demand Exact_Reproduction_of_Current_Demand                                                                  Note
+             No random noise                      0.00  1800           1.000000             10.655157                                0.000000                                  0.000000                                0                                 0.000000                                              1.577778                       not applicable Synthetic demand-only sensitivity; not calibrated to real PHC demand.
+                 Lower noise                      0.10  1800           1.001459             10.657481                                0.821355                                  7.751406                               74                                 4.111111                                              0.766667                       not applicable Synthetic demand-only sensitivity; not calibrated to real PHC demand.
+               Current noise                      0.19  1800           1.002882             10.660299                                1.559848                                 14.716601                              492                                27.333333                                              0.000000                                 True Synthetic demand-only sensitivity; not calibrated to real PHC demand.
+Higher-noise stress scenario                      0.25  1800           1.004608             10.668850                                2.045505                                 19.282462                              722                                40.111111                                              0.477778                       not applicable Synthetic demand-only sensitivity; not calibrated to real PHC demand.
+
+Saved: noise_sensitivity_summary.csv, noise_sensitivity_by_medicine.csv

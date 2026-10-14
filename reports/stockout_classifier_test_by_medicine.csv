@@ -1,0 +1,11 @@
+Split,Model,Rows,Positive_Labels,Positive_Rate,Threshold,Accuracy,Balanced_Accuracy,Precision,Recall,F1,Average_Precision_PR_AUC,ROC_AUC,True_Negatives,False_Positives,False_Negatives,True_Positives,Medicine_ID,Medicine_Name
+test,LogisticRegression_balanced,28,6,0.214286,0.650000,0.964286,0.977273,0.857143,1.000000,0.923077,0.976190,0.992424,21,1,0,6,MED001,Paracetamol Tablet 500 mg
+test,LogisticRegression_balanced,28,0,0.000000,0.650000,1.000000,,0.000000,0.000000,0.000000,,,28,0,0,0,MED002,Amoxicillin Capsule 500 mg
+test,LogisticRegression_balanced,28,0,0.000000,0.650000,1.000000,,0.000000,0.000000,0.000000,,,28,0,0,0,MED003,Oral rehydration salts (ORS)
+test,LogisticRegression_balanced,28,3,0.107143,0.650000,0.964286,0.980000,0.750000,1.000000,0.857143,0.805556,0.973333,24,1,0,3,MED004,Zinc sulphate Dispersible Tablet 20 mg
+test,LogisticRegression_balanced,28,0,0.000000,0.650000,1.000000,,0.000000,0.000000,0.000000,,,28,0,0,0,MED005,Amlodipine Tablet 5 mg
+test,LogisticRegression_balanced,28,0,0.000000,0.650000,1.000000,,0.000000,0.000000,0.000000,,,28,0,0,0,MED006,Metformin Tablet 500 mg
+test,LogisticRegression_balanced,28,0,0.000000,0.650000,1.000000,,0.000000,0.000000,0.000000,,,28,0,0,0,MED007,Albendazole Tablet 400 mg
+test,LogisticRegression_balanced,28,5,0.178571,0.650000,0.928571,0.956522,0.714286,1.000000,0.833333,0.902857,0.973913,21,2,0,5,MED008,Ferrous salt 60 mg + Folic acid 500 mcg Tablet
+test,LogisticRegression_balanced,28,0,0.000000,0.650000,1.000000,,0.000000,0.000000,0.000000,,,28,0,0,0,MED009,Omeprazole Capsule 20 mg
+test,LogisticRegression_balanced,28,0,0.000000,0.650000,1.000000,,0.000000,0.000000,0.000000,,,28,0,0,0,MED010,Salbutamol Tablet 2 mg

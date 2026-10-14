@@ -1,0 +1,21 @@
+File,Column_or_Group,Meaning,Role
+phc_daily_inventory.csv,PHC_ID,Demo primary health centre identifier,Operational context; synthetic
+phc_daily_inventory.csv,Medicine_ID and Medicine_Name,Medicine/form identifier,Operational context; medicine IDs are categorical model inputs
+phc_daily_inventory.csv,Date,Date of daily ledger record,Historical index
+phc_daily_inventory.csv,Total_Demand,Synthetic required demand including unmet demand,Ground-truth target source for next-day demand
+phc_daily_inventory.csv,Dispensed_Quantity,Quantity issued from usable stock,Inventory ledger
+phc_daily_inventory.csv,Unmet_Demand,Demand not dispensed,Inventory ledger
+phc_daily_inventory.csv,Opening_Stock and Closing_Stock,Opening/ending stock quantities,Inventory ledger; not used as demand-model features
+phc_daily_inventory.csv,Quantity_Received and Expired_Quantity,Today's simulated receipts and stock expiry,Inventory ledger
+phc_daily_inventory.csv,Patient_Visits,Simulated visits for the date,Model input
+phc_daily_inventory.csv,Emergency_Flag and Crisis_Flag,Simulated scenario indicators,Current-day model context; target-day crisis is an explicit scenario input
+ml_training_full.csv,Prediction_Date and Target_Date,Day from which forecast is made and day being forecast,Chronological alignment
+ml_training_full.csv,Lag_1_Demand and Lag_7_Demand,Recent historical total demand,Model input
+ml_training_full.csv,Avg_7_Day_Demand / Avg_30_Day_Demand / Avg_90_Day_Demand,Rolling demand averages calculated through prediction date,Model input
+ml_training_full.csv,Next_Day_Demand,Synthetic demand on Target_Date,Regression target; never an input feature
+"ml_train.csv, ml_validation.csv, ml_test.csv",Chronological model training/selection/held-out evaluation splits,Model datasets
+purchase_orders.csv,Order_Date and quantities,Simulated orders and order quantity,Inventory planning data
+purchase_orders.csv,Expected_Delivery_Date / Simulated_Delivery_Date / Delivery_Delay_Days,Expected and delayed simulated delivery dates,Inventory planning data
+medicine_batches.csv,Expiry_Date and Closing_Quantity,Batch expiry and remaining quantity at simulation end,Expiry-risk planning input
+
+demand_generation_audit.csv,Random_Noise_Factor and calculated demand fields,Internal factors used by simulator to generate target values,Diagnostic only; excluded from model input

@@ -1,0 +1,11 @@
+Medicine_ID,Rows,Actual_Mean,Predicted_Mean,MAE_Units_For_This_Medicine,RMSE_Units_For_This_Medicine,MAE_As_Percent_Of_Medicine_Mean,Mean_Signed_Error_Predicted_Minus_Actual,Overprediction_Rows,Underprediction_Rows,Note
+MED007,26,3.30769,2.99447,0.78145,0.98402,23.62536,-0.31322,11,15,Units are medicine-specific; do not compare raw MAE across dosage forms as if units were interchangeable.
+MED009,26,11.38462,10.32964,2.58160,3.19265,22.67621,-1.05498,10,16,Units are medicine-specific; do not compare raw MAE across dosage forms as if units were interchangeable.
+MED006,26,15.11538,14.88454,3.41057,3.94731,22.56357,-0.23085,12,14,Units are medicine-specific; do not compare raw MAE across dosage forms as if units were interchangeable.
+MED004,26,10.34615,9.41102,2.09221,2.56060,20.22209,-0.93514,11,15,Units are medicine-specific; do not compare raw MAE across dosage forms as if units were interchangeable.
+MED001,26,27.11538,26.00499,5.36110,6.47017,19.77143,-1.11040,11,15,Units are medicine-specific; do not compare raw MAE across dosage forms as if units were interchangeable.
+MED003,26,8.65385,8.34126,1.69303,2.08920,19.56394,-0.31259,10,16,Units are medicine-specific; do not compare raw MAE across dosage forms as if units were interchangeable.
+MED005,26,13.23077,12.12021,2.47122,2.90453,18.67786,-1.11056,9,17,Units are medicine-specific; do not compare raw MAE across dosage forms as if units were interchangeable.
+MED010,26,5.15385,5.00177,0.88729,1.05256,17.21610,-0.15207,13,13,Units are medicine-specific; do not compare raw MAE across dosage forms as if units were interchangeable.
+MED008,26,15.53846,14.23823,2.32428,3.18949,14.95821,-1.30023,9,17,Units are medicine-specific; do not compare raw MAE across dosage forms as if units were interchangeable.
+MED002,26,5.65385,5.76736,0.78679,1.00440,13.91595,0.11351,13,13,Units are medicine-specific; do not compare raw MAE across dosage forms as if units were interchangeable.

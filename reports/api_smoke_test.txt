@@ -1,0 +1,1 @@
+API SMOKE TEST PASSED: /health, /catalog, /forecast, /stockout-risk, unknown PHC/medicine validation

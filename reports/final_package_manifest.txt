@@ -1,0 +1,95 @@
+PHC MEDICINE ML PACKAGE MANIFEST
+================================
+Generated_UTC: 2026-10-13T18:30:42+00:00
+Package purpose: Synthetic-data ML prototype for next-day demand regression, next-day stock-out classification, scenario-based inventory planning, and UI/backend integration.
+Data provenance: All facility-level daily visits, demand, inventory, purchase orders, deliveries, expiry, stock-out and crisis values are synthetic.
+Model files: models/medicine_demand_model.joblib; models/stockout_next_day_classifier.joblib
+Core dataset sizes: 1,800 inventory rows; 1,780 ML rows; chronological split 1,240 / 260 / 280.
+Verified: verify_package.py passes model load/predict, recursive forecast, inventory projection, and next-day classifier smoke tests.
+Verified: verify_api.py passes health, catalog, forecast, stock-out risk, and unknown-pair handling smoke tests.
+Important result: demand model does not outperform the 7-day-average baseline on held-out synthetic test data.
+Important result: stock-out classifier has only 14 positive labels in test data; metric estimates are unstable and scores are not calibrated.
+Warning: this bundle is for project demonstration only; it is not validated for live PHC decisions.
+Hashes below cover all files except this manifest itself.
+
+SIZE_BYTES  SHA256  RELATIVE_PATH
+----------  ------  --------------
+      4943  f9148ce50c54ea8817e2f279ecf271da5680c7e3a2816e93b04f3595746a2c14  BACKEND_UI_INTEGRATION.md
+     15899  b7dd8cdabfc82f35dfbcffbbbcfda829f3955b782370543a9ebc1b617bc53954  README.md
+     14998  2e87d78ca2836a91a985f97e849387bbf15be64ce4a3bca1fc63abf108a2bd57  __pycache__/api.cpython-313.pyc
+      8376  1491447caed7c4302fe1bffbe1d0d83683b2daa1e4ff50dfac50cef41f08276e  __pycache__/predict_stockout.cpython-313.pyc
+     10404  c1389c2ad64192e7f2500c96d92d1a275187b369ed15bc3fdfef0f0e801dd471  api.py
+      4895  043e07d31aa5cc4d4dfc6090160cc53fe6f6c565c31fa6db124e541d82b5ac10  data/DATA_GENERATION_README.md
+       928  accaba8dd0669cc33daf898d4afa6a4a630c1951e159062901edb9644888d536  data/crisis_counterfactual_comparison.csv
+      2355  d26281d48a66d2bea8614ff1811e7b1addba0d77bbc3fa54595dba6f58067499  data/data_dictionary.csv
+    595351  a50f1664d6d0a11f563c269864ffee822bdcf22540462467657a80771cbfbcde  data/demand_generation_audit.csv
+     18699  e40f6bd54e416b35dd533f813590742c50c671715b0f1ad8b2ecf4c252ac7e51  data/medicine_batches.csv
+      1515  887223ae4d05c7ff2e1a2d69eda3829185150ab27beca5718ed8f518f67e2387  data/medicine_catalogue.csv
+     47564  ad47499a16dce32f272589b6e8090e9516826864c6c2b8dd59c61c4555ee43da  data/ml_test.csv
+    207933  d548cfb2ed9e9328da9fc63129695874fe202cb280e4cc63c9cff105f31019d5  data/ml_train.csv
+    298789  6132c5c9fc774e521230804c247a641fa34f3dad2677f39eec9b634582d152ab  data/ml_training_full.csv
+     44276  0c1b57218c6605b0b75632c8a9568db74eea8aa37760d3d7d6c07ccf9c08ea31  data/ml_validation.csv
+    276504  cf170e7f636cc45ab09a098d0dcf1694a8f77d74da85470e8f6e5acb5244938d  data/phc_daily_inventory.csv
+     13528  c6906d9665c15c59923b599789c0b1e5bc0a75d9e93c620df0c22bfc85581d7d  data/purchase_orders.csv
+      1880  687e63c83e2993d7ab7887ccea62bfd6d693d4a1314b8af594173d24a63d77b1  data/reference_sources_register.csv
+      4198  f251c61529c508198cba1920891a414d70e66c98e2f5cbab10e29aeaebe25eee  docs/INTERVIEW_NOTES.md
+      4056  449180f7f5e961ec0054627f2067448c4b605a733b34b726907e88875b95410b  docs/MODEL_CARD.md
+      5698  4b172ad71e497e360d94a7fcf07638d67a8770d29a36f8d0d1162383e847157c  forecast_inventory.py
+        39  c780a707a2685876a3b745219ec1dd52c5ca4fb47e662a509c4d70f06c89d29f  frontend/.env.example
+      5728  75f6e21e621c25a6ac6dffe08495d434b42dce12e5a8a5077f5799d11a6ceab5  frontend/PHCForecastExample.jsx
+      1742  93a16009a8f715e6a588b27511cbcfa24be5a07ec3a504fcca04d25ccdb5e9ba  integrations/express_ml_proxy.js
+   3801711  5c17b35a73a26e27f02fcacbcfc47da692a00e265d310641ae67c0e4ab905e1e  models/medicine_demand_model.joblib
+      1664  5176a4c679f64d8f10d0c0a69547e307fdf8e930ddd2b11d88132ee7f0441bd2  models/model_metadata.json
+      1752  c5bfaef3e5ff4b44b06cfe2bfad12374608f1b1efe582f05028643a7f39d9918  models/stockout_classifier_metadata.json
+      3745  c5638fe445e87b5629c5c64f25e1054f1289573c806fe7a3c990ca652dc8e31a  models/stockout_next_day_classifier.joblib
+      5406  672fa0648b665bd8ecf33e77e5838cc6310696e40409d8169f1a9b941bd3890c  predict_stockout.py
+    605854  27e5dd768265b0280465851f62b0b43dc97f2a84210b020c5b42fe4c03e4dce2  reference/NHM_Essential_Medicine_List_SHC_PHC_March_2020.pdf
+      3483  ed025b3355fb751cb96b8fe5ffc33df6670afbe68f4441b7768d1f61a6d1b71e  reports/FINAL_RESULTS_SUMMARY.md
+       101  e9024631e3e4252640abbf4ebbdc9f89d099c5fcd6f150a4f849667359f04cac  reports/api_smoke_test.txt
+      1660  50ff4811196de131c3bc748e7667bb04ef2de49a9964a4648092cb9c6bb8e71d  reports/crisis_scenario_forecast_sensitivity.csv
+      3109  c5d723b919c3d59143178df4787ec2effd40b6cb589c89230ae87791bab6cd9d  reports/crisis_scenario_forecast_sensitivity.txt
+      3708  6fec6254df11c01b09aa659698a204f135160f6c98604f4530398a304ea7b473  reports/demo_PHC-DEMO-001_MED001_14d_demand_forecast.csv
+        64  6030e66fa329b9e651db821bea65acae2282025314bf0e457389943d098476fd  reports/demo_PHC-DEMO-001_MED001_14d_expiry_risk.csv
+      1636  bc31113d9e5c2dd3f39b16e254f86e95794ae26461be618288b43e4dc5f2e710  reports/demo_PHC-DEMO-001_MED001_14d_inventory_projection.csv
+      1343  1f8ee8c8394d4abab430d9229070b29eccf7add5b788649c98d2c50f69c5f3fc  reports/demo_PHC-DEMO-001_MED001_14d_planning_summary.json
+       510  e672f2f1539cd86fb0913efe9cadf5a82a4ced27c402ff416213a9b4f6f3a30c  reports/demo_PHC-DEMO-001_MED001_next_day_stockout_score.json
+      1956  646ecfbaa790c528599f8fe728832cbf1697b90bae74d453252c9e6dd057dd7f  reports/feature_importance.csv
+      3708  6fec6254df11c01b09aa659698a204f135160f6c98604f4530398a304ea7b473  reports/final_demo_PHC-DEMO-001_MED001_14d_demand_forecast.csv
+        64  6030e66fa329b9e651db821bea65acae2282025314bf0e457389943d098476fd  reports/final_demo_PHC-DEMO-001_MED001_14d_expiry_risk.csv
+      1636  bc31113d9e5c2dd3f39b16e254f86e95794ae26461be618288b43e4dc5f2e710  reports/final_demo_PHC-DEMO-001_MED001_14d_inventory_projection.csv
+      1343  1f8ee8c8394d4abab430d9229070b29eccf7add5b788649c98d2c50f69c5f3fc  reports/final_demo_PHC-DEMO-001_MED001_14d_planning_summary.json
+      1678  5dc61c77eabd655153b52f45995b4e36e56254e7b9f81774807a8e06cf481d1d  reports/model_evaluation_summary.json
+      5792  be38994c7ec7686213eb966675614c803a38ec5264fcd09dddd06331e72ef4b2  reports/model_evaluation_summary.txt
+      4768  6715f1709300f93f97a7873a9dec3c5ef324c2c2c1b5e5107f27f03c497ea408  reports/noise_sensitivity_by_medicine.csv
+      2656  385bd56004a0acf0e34939c90b17f64f88eccd7caf7a2510faf202129e26f5ac  reports/noise_sensitivity_report.txt
+       963  20ac0bc2fe1c2633308c424c2f30c763e7ad9876d135baa47cc6396893ef3ac3  reports/noise_sensitivity_summary.csv
+       686  15715846b3451e9f9f31ad67f2a16c8d0649d3f6fe595b76f34815930e9ab8d3  reports/package_smoke_test.json
+      1701  34b02bdd5f4a9c4c4f5f465173d63bac1b930d4960bffe99dc06284683968b68  reports/stockout_classifier_evaluation.txt
+      1696  717cd41b6338c0cbc688fe2207fe9b975e7a2aefe5de44795bcae680c878ffd5  reports/stockout_classifier_test_by_medicine.csv
+       464  8c0827d13cbd848a0a50bf7c5d82bb071c16d150bf675cacdb2059269ff336c2  reports/stockout_classifier_test_metrics.csv
+     24469  a461f25bac83b66cce3a4662541f75ee6a5379e6dddb2919aa5a35a554ef59ff  reports/stockout_classifier_test_predictions.csv
+       694  7f9f8fe18474b449801ef1100c414d1e2b84dbd711178288a21fdb2f1447d129  reports/stockout_classifier_validation_model_comparison.csv
+       661  72932bac2a9bdfc1adabb4c2c64c424bd7431f8437523b733b591be208c3a12a  reports/synthetic_crisis_comparison.csv
+      2342  27150e0e4df185c4571e81fca05bedb9f7f7046e90f4ebed2bd927a76935be11  reports/synthetic_data_audit_report.txt
+       996  297220c60590901ca7406a848187cd6306c085887fa1304189236a35cce2c5df  reports/synthetic_demand_profile.csv
+      2454  5b7a00d11d48df62688b2c3be7174015c68e736f6acf99b166cdad11a035b6b0  reports/synthetic_largest_demand_jumps.csv
+      1930  9eccf65759c41242fa62e9d7c8c38fde4ca11e6f5dbb24883ccef4fb02af5586  reports/test_metrics_by_medicine.csv
+       897  72cf1a1c9bb5d43b04f4026e1ab1b6d131659e825ef5115da457e00f18118bd1  reports/test_metrics_comparison.csv
+     28726  e84360f63bfc292327dfff5225dc279bdb4e63d9640a7bc44032ec9e72c9b56c  reports/test_predictions.csv
+        71  80b6b379b2c107bdc0dd7807dc6e3392479027f601a1b366b4f2637a62c99f3f  reports/training_environment.txt
+      1948  8c37323ebb0ee5f18aecde79757a42c595d34480189052dee2c7b00b2c4edbaa  reports/validation_metrics_by_medicine.csv
+      1798  7d13512b479da686efb64f8874df7a48e74bbd703626a1a8f574be57c37d692a  reports/validation_model_comparison.csv
+     26268  7c97b46e66bda574c14a7abb3ed302b71edbf56253d87769d0cb1b9228233113  reports/validation_predictions_selected_model.csv
+        94  693a0ebd1d77366a2f6d84e8bacadbf1032db49dff7fe46163d43847aa987a57  requirements.txt
+      6280  cb47ebf414d8e0b3ca4a02374cdeeabcbba4d56411be52bd70c3b8ad88382fbc  scripts/analyze_noise_sensitivity.py
+     12991  568c92806719c8fce8960e87cf29497d15ed6a9b3a9bb6e58e4d841baba0ac6a  scripts/audit_synthetic_data.py
+      2262  762977b489ff393bffdd13b10d5954697e643eb550c3b85021caec12c0dc8ded  scripts/evaluate_crisis_scenario_response.py
+     36881  80a19dbc5dcd8e8d435243e81f2263795f79278c3477f05b35f67349bdbb1d15  scripts/generate_synthetic_data.py
+         0  e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855  src/__init__.py
+       152  810aecf72ceb705b784d00bb59584004672720aec51a1877d56ea92a4de39008  src/__pycache__/__init__.cpython-313.pyc
+     32235  5dd629de546c246a140587c6c3c6a036632580a862b8e6b6e6dca992f9f9e985  src/__pycache__/phc_ml.cpython-313.pyc
+     25148  bfa43faa6b087ed21d6e8cb554a3d846e15ac15904bae5c38dc7d8ce8366a121  src/phc_ml.py
+     17566  5de731e5716dbe09f4b995dda98af740c7fbe247278679f6cc0c3a08286e2ee4  train_and_evaluate.py
+     14021  d0f0f0629fa6d9c9954f12f2d59209dcca2b19b5ab64c39d09bb72f21234b5d5  train_stockout_classifier.py
+      1444  af75c43051c07b7bd679d70b37d95f1da0812e6895499bba36923fab2b24e2a5  verify_api.py
+      3036  8cc57558b814a48db5c553c67aa183216747291433a647213640826c5d6808d4  verify_package.py

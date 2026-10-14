@@ -1,0 +1,11 @@
+Medicine_ID,Medicine_Name,Unit_Of_Measure,Mean_Demand,Median_Demand,Std_Demand,Min_Demand,Max_Demand,Coefficient_of_Variation,Corr_Visits_vs_Demand,Stockout_Row_Rate
+MED001,Paracetamol Tablet 500 mg,tablets,26.994,26.0,9.014,8,59,0.334,0.635,0.039
+MED002,Amoxicillin Capsule 500 mg,capsules,5.478,5.0,2.107,1,13,0.385,0.369,0.067
+MED003,Oral rehydration salts (ORS),sachets,7.822,8.0,2.491,3,17,0.318,0.691,0.0
+MED004,Zinc sulphate Dispersible Tablet 20 mg,tablets,8.922,9.0,2.782,3,17,0.312,0.677,0.033
+MED005,Amlodipine Tablet 5 mg,tablets,11.8,11.0,3.551,4,23,0.301,0.617,0.039
+MED006,Metformin Tablet 500 mg,tablets,14.167,14.0,4.587,5,32,0.324,0.681,0.011
+MED007,Albendazole Tablet 400 mg,tablets,3.05,3.0,1.079,1,6,0.354,0.751,0.083
+MED008,Ferrous salt 60 mg + Folic acid 500 mcg Tablet,tablets,13.656,13.0,4.737,5,26,0.347,0.777,0.083
+MED009,Omeprazole Capsule 20 mg,capsules,9.956,10.0,3.114,3,19,0.313,0.686,0.0
+MED010,Salbutamol Tablet 2 mg,tablets,4.811,5.0,1.73,1,11,0.36,0.543,0.067

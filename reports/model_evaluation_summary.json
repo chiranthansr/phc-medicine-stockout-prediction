@@ -1,0 +1,30 @@
+{
+  "model_selection": "Validation-only; selected model refit on train+validation before single final test evaluation.",
+  "selected_model": "ExtraTrees_400_leaf5",
+  "validation_rows": 260,
+  "test_rows": 280,
+  "test_target_date_range": [
+    "2025-03-18",
+    "2025-03-31"
+  ],
+  "selected_model_test_metrics": {
+    "Model": "ExtraTrees_400_leaf5",
+    "Rows": 280,
+    "MAE_Pooled_Different_Units_Caution": 2.5008125061213287,
+    "RMSE_Pooled_Different_Units_Caution": 3.6036171743923164,
+    "R2_Pooled_Different_Units_Caution": 0.6546916314980772,
+    "Macro_Mean_Per_Medicine_Normalized_MAE": 0.264884511597063,
+    "Interpretation_Note": "Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE."
+  },
+  "validation_selected_model_metrics": {
+    "Model": "ExtraTrees_400_leaf5",
+    "Rows": 260,
+    "MAE_Pooled_Different_Units_Caution": 2.238954158528437,
+    "RMSE_Pooled_Different_Units_Caution": 3.166273818113087,
+    "R2_Pooled_Different_Units_Caution": 0.8271541859618781,
+    "Macro_Mean_Per_Medicine_Normalized_MAE": 0.19319071177933583,
+    "Interpretation_Note": "Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE."
+  },
+  "important_caution": "Pooled metrics combine tablets, capsules and sachets. Inspect per-medicine metrics. All reported scores are on synthetic records only and do not establish real PHC accuracy.",
+  "why_no_precision_recall": "The demand forecaster is regression, so MAE/RMSE/R2 are appropriate. A separate next-day stock-out classifier reports precision/recall/F1 in stockout_classifier_test_metrics.csv."
+}

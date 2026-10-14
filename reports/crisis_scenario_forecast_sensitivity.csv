@@ -1,0 +1,11 @@
+PHC_ID,Medicine_ID,Medicine_Name,Horizon_Days,Mean_Forecast_Crisis_Off,Mean_Forecast_Crisis_On,Mean_Change_Units,Relative_Change_Percent,Interpretation
+PHC-DEMO-002,MED010,Salbutamol Tablet 2 mg,14,4.549,6.855,2.306,50.71,Model scenario sensitivity only; not real-world crisis response accuracy.
+PHC-DEMO-002,MED001,Paracetamol Tablet 500 mg,14,26.581,34.512,7.931,29.84,Model scenario sensitivity only; not real-world crisis response accuracy.
+PHC-DEMO-002,MED002,Amoxicillin Capsule 500 mg,14,6.614,7.106,0.492,7.44,Model scenario sensitivity only; not real-world crisis response accuracy.
+PHC-DEMO-002,MED004,Zinc sulphate Dispersible Tablet 20 mg,14,9.171,9.615,0.444,4.84,Model scenario sensitivity only; not real-world crisis response accuracy.
+PHC-DEMO-002,MED009,Omeprazole Capsule 20 mg,14,10.38,10.491,0.111,1.07,Model scenario sensitivity only; not real-world crisis response accuracy.
+PHC-DEMO-002,MED003,Oral rehydration salts (ORS),14,7.951,7.883,-0.069,-0.86,Model scenario sensitivity only; not real-world crisis response accuracy.
+PHC-DEMO-002,MED005,Amlodipine Tablet 5 mg,14,12.461,12.341,-0.12,-0.96,Model scenario sensitivity only; not real-world crisis response accuracy.
+PHC-DEMO-002,MED008,Ferrous salt 60 mg + Folic acid 500 mcg Tablet,14,11.949,11.724,-0.225,-1.88,Model scenario sensitivity only; not real-world crisis response accuracy.
+PHC-DEMO-002,MED006,Metformin Tablet 500 mg,14,15.071,14.526,-0.544,-3.61,Model scenario sensitivity only; not real-world crisis response accuracy.
+PHC-DEMO-002,MED007,Albendazole Tablet 400 mg,14,3.099,2.84,-0.259,-8.34,Model scenario sensitivity only; not real-world crisis response accuracy.

@@ -1,0 +1,5 @@
+Model,Rows,MAE_Pooled_Different_Units_Caution,RMSE_Pooled_Different_Units_Caution,R2_Pooled_Different_Units_Caution,Macro_Mean_Per_Medicine_Normalized_MAE,Interpretation_Note
+ExtraTrees_400_leaf5,280,2.500813,3.603617,0.654692,0.264885,"Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE."
+Baseline_Previous_Day,280,3.035714,4.222389,0.525926,0.338468,"Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE."
+Baseline_7_Day_Average,280,2.405614,3.397337,0.693093,0.262942,"Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE."
+Baseline_30_Day_Average,280,2.512032,3.527875,0.669055,0.276694,"Pooled MAE/RMSE/R2 combine tablets, capsules and sachets; prioritize per-medicine metrics and macro normalized MAE."

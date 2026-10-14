@@ -1,0 +1,50 @@
+SYNTHETIC PHC DATA AUDIT
+========================
+Purpose: check internal consistency and summarise generated patterns.
+This does NOT establish real-world representativeness; comparison with compatible real data is required.
+
+Daily inventory rows: 1800
+PHCs: 2 | medicines: 10 | dates: 90
+ML forecast rows: 1780
+Purchase orders: 98 | medicine batches: 133
+Source_Data_Type values: ['SYNTHETIC']
+
+INTERNAL CONSISTENCY
+- Available_Stock equation failures: 0
+- Closing_Stock equation failures: 0
+- Demand balance failures: 0
+- Stockout flag failures: 0
+- Negative quantity cells: 0
+- Duplicate PHC-medicine-date rows: 0
+- Opening stock vs previous closing stock continuity failures: 0
+- Batch balance failures: 0
+- Prediction/target must be one day apart failures: 0
+- ML target vs daily inventory mismatches: 0
+- Lag_1 demand vs prediction-date demand mismatches: 0
+- Overall validation status: PASS
+
+GENERATED PATTERN SUMMARY (SYNTHETIC ONLY)
+- Stockout rows: 76 (4.22% of daily rows)
+- Total unmet demand units: 647
+- Total expired units recorded in batches: 80
+- Mean daily demand across medicine-specific units: 10.67 (not comparable across units/medicines)
+- Overall Pearson correlation of patient visits vs demand pooled across medicines: 0.299 (interpret cautiously due to mixed medicine scales)
+- Crisis period for PHC-DEMO-002: 2025-02-15 to 2025-02-27
+- Orders with simulated delivery after expected date: 58/98
+- Median simulated order delay in days: 1.0
+- Delivery_Delay_Days blank/invalid values: 0
+- Delivery_Delay_Days vs date-difference mismatches: 0
+
+MISSING VALUES IN ML DATASET
+- Lag_7_Demand: 140
+- Days_To_Nearest_Expiry: 79
+
+OUTPUT FILES
+- synthetic_demand_profile.csv: statistics by medicine, visit-demand correlation, stock-out rates.
+- synthetic_largest_demand_jumps.csv: largest day-to-day simulated changes.
+- synthetic_crisis_comparison.csv: crisis versus non-crisis demand for PHC-DEMO-002.
+
+WARNINGS
+- Patient visits, demand baselines, crisis multipliers, noise, stock levels, lead times, delays and expiry assumptions were chosen by the simulator author; they are not empirically calibrated.
+- A low/high stockout rate in this simulation must not be presented as the rate in real PHCs.
+- Demand correlations within this dataset show what the generator created, not how real patient visits affect medicine demand.

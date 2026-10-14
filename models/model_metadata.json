@@ -1,0 +1,53 @@
+{
+  "project": "AI-Based Medicine Stock-Out Prediction and Inventory Management System for PHCs",
+  "model_type": "ExtraTrees_400_leaf5",
+  "estimator": "ExtraTreesRegressor",
+  "model_path": "models/medicine_demand_model.joblib",
+  "target": "Next_Day_Demand",
+  "features_numeric": [
+    "Patient_Visits",
+    "Emergency_Flag",
+    "Crisis_Flag",
+    "Target_Crisis_Flag",
+    "Expected_Target_Patient_Visits",
+    "Demand_Deviation_Percent",
+    "Persistent_Demand_Shift_Flag",
+    "Lag_1_Demand",
+    "Lag_7_Demand",
+    "Avg_7_Day_Demand",
+    "Avg_30_Day_Demand",
+    "Avg_90_Day_Demand",
+    "Consumption_Trend_Ratio_7d_to_30d",
+    "Patient_Visits_Avg_7d",
+    "Patient_Visits_Lag_1",
+    "Patient_Visits_Change_1d",
+    "Demand_Rolling_7d_Std",
+    "Lag_14_Demand"
+  ],
+  "features_categorical": [
+    "PHC_ID",
+    "Medicine_ID",
+    "Target_Day_Of_Week",
+    "Target_Month"
+  ],
+  "selected_using": "Lowest macro mean per-medicine normalized MAE on chronological validation split",
+  "fit_rows_final": 1500,
+  "test_rows": 280,
+  "train_date_max": "2025-03-04",
+  "validation_dates": [
+    "2025-03-05",
+    "2025-03-17"
+  ],
+  "test_dates": [
+    "2025-03-18",
+    "2025-03-31"
+  ],
+  "source_data": "SYNTHETIC ONLY; all PHC-level demand, visits, inventory, deliveries, batches and crisis values are simulated.",
+  "future_known_feature": "Target_Crisis_Flag is a declared target-day scenario input; in real deployment it must be supplied only if known/declared.",
+  "unvalidated_real_world_accuracy": true,
+  "random_seed": 42,
+  "python_version": "3.13.5",
+  "pandas_version": "2.2.3",
+  "scikit_learn_version": "1.8.0",
+  "joblib_version": "1.5.3"
+}
