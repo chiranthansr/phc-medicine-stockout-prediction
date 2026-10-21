@@ -4,3 +4,4 @@ scikit-learn==1.8.0
 joblib==1.5.3
 fastapi==0.128.2
 uvicorn==0.48.0
+httpx==0.28.1
